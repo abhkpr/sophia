@@ -1,4 +1,12 @@
 #!/bin/bash
+# install pandoc if not available
+if ! command -v pandoc &> /dev/null; then
+    echo "installing pandoc..."
+    wget -q https://github.com/jgm/pandoc/releases/download/3.1.3/pandoc-3.1.3-linux-amd64.tar.gz
+    tar -xzf pandoc-3.1.3-linux-amd64.tar.gz
+    export PATH="$PWD/pandoc-3.1.3/bin:$PATH"
+    echo "pandoc installed: $(pandoc --version | head -1)"
+fi
 set -e
 
 SRC="src"
