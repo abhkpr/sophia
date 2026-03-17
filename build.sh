@@ -29,7 +29,7 @@ SUBJECTS = {
     "cpp": "C++",
 }
 
-ORDER = ["dsa","os","networks","database","architecture","toc","compiler","discrete","cpp"]
+ORDER = ["discrete","cpp","dsa","os","toc","architecture","compiler","database","networks"]
 
 with open(THEME) as f:
     TEMPLATE = f.read()
@@ -126,7 +126,7 @@ for subj in ORDER:
     count = len(pages)
     cards += f'<a href="/{subj}/{first_slug}.html" class="subject-card"><div class="card-name">{display}</div><div class="card-count">{count} {"page" if count == 1 else "pages"}</div></a>'
 
-home_content = f'''<div class="homepage"><div class="home-header"><div class="home-eyebrow">// knowledge base</div><h1 class="home-title">Sophia</h1><p class="home-sub">core computer science — notes, concepts, and clarity.</p></div><div class="subject-grid">{cards}</div></div>'''
+home_content = f'''<div class="homepage"><div class="home-header"><div class="home-eyebrow">// knowledge base</div><h1 class="home-title">Sophia</h1><p class="home-sub">core computer science</p></div><div class="subject-grid">{cards}</div></div>'''
 
 html = render(TEMPLATE, build_nav(), home_content, "Sophia", "", '<a href="/">home</a>')
 with open(os.path.join(OUT, "index.html"), "w") as f:
