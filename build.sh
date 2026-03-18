@@ -242,7 +242,7 @@ for subj in ORDER:
 home_content = f'''<div class="homepage">
 <div class="home-eyebrow">knowledge base</div>
 <h1 class="home-title">So<em>phia</em></h1>
-<p class="home-desc">Core computer science — structured notes, worked examples, and practice problems.</p>
+<p class="home-desc">Core computer science</p>
 <div class="home-divider"></div>
 <div class="home-grid-label">subjects</div>
 <div class="subject-grid">{cards}</div>
